@@ -13,8 +13,8 @@ import lombok.Setter;
 @Setter
 public class Vacancy {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @NotNull(message = "Value must not be null")
     @ManyToOne
     @JoinColumn(name = "position_id", nullable = false)
