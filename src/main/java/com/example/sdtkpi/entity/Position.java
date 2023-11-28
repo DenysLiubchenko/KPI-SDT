@@ -16,9 +16,9 @@ public class Position {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotNull(message = "Value must not be null")
-    @Column
+    @Column(nullable = false, unique = true)
     private String jobTile;
     @NotNull(message = "Value must not be null")
-    @Column
+    @Column(nullable = false, unique = true)
     private Double salary;
 }
